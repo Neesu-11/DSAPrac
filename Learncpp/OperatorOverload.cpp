@@ -11,11 +11,11 @@ struct Vector3{
     y += Other.y,
     z += Other.z};
    }
-   Vector3 operator= (Vector3 Other){
+ /* Vector3 operator= (Vector3 Other){
    return Vector3{ x = Other.x,
     y = Other.y,
     z = Other.z};
-   }
+   } */
 };
 
 int main(){
