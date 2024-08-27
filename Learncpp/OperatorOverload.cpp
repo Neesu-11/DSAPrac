@@ -8,9 +8,9 @@ struct Vector3{
 
    Vector3 operator+ (const Vector3& Other){
     return Vector3 {
-    x += Other.x,
-    y += Other.y,
-    z += Other.z
+     x + Other.x,
+     y + Other.y,
+     z + Other.z
     };
    }
  /* Vector3 operator= (Vector3 Other){
@@ -28,7 +28,12 @@ int main(){
  Vector3 res = vec1 + vec2;
 
  cout << res.x <<"\t"<< res.y << "\t" << res.z << "\n";
+ 
+ /*Structured Binding Example*/
 
+auto [a, b, c] {vec1};
+
+cout << a << b << c;
  
 
 
