@@ -28,10 +28,10 @@ int main(){
  Vector3 res = vec1 + vec2;
 
  cout << res.x <<"\t"<< res.y << "\t" << res.z << "\n";
- 
- /*Structured Binding Example*/
 
-auto [a, b, c] {vec1};
+ /*Structured Binding Example unpacking*/
+
+auto [a, b, c]  {vec1};
 
 cout << a << b << c;
  
