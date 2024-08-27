@@ -6,10 +6,12 @@ struct Vector3{
     int y;
     int z;
 
-   Vector3 operator+ (Vector3 Other){
-    return Vector3 {x += Other.x,
+   Vector3 operator+ (const Vector3& Other){
+    return Vector3 {
+    x += Other.x,
     y += Other.y,
-    z += Other.z};
+    z += Other.z
+    };
    }
  /* Vector3 operator= (Vector3 Other){
    return Vector3{ x = Other.x,
@@ -20,12 +22,15 @@ struct Vector3{
 
 int main(){
 
- Vector3 vec1 {1,2,3};
+ Vector3 vec1 {10,20,30};
  Vector3 vec2 {10,20,30};
 
  Vector3 res = vec1 + vec2;
 
- cout << res.x << res.y << res.z;
+ cout << res.x <<"\t"<< res.y << "\t" << res.z << "\n";
+
+ 
+
 
 
     return 0;
