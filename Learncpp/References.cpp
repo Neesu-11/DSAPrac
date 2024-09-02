@@ -22,5 +22,9 @@ cout << z << endl; // we can print address of pointer like this
 func1(&y);
 cout << y << endl;
 
+/*When function parameter is int& only references are accepted (reference variable without &) and no pointers
+Wheb function parameter is int* it can accept both reference(with &) and pointers without dereferencing them
+*/
+
     return 0;
 }
