@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-void func1 (int* arg){
-    ++(*arg);
-    ++(*arg);
-    ++(*arg);
+void func1 (int& arg){
+    ++(arg);
+    ++(arg);
+    ++(arg);
 }
 
 int main() {
@@ -19,11 +19,11 @@ cout << y << endl; // we can print value of reference like this
 cout<< &x << endl; 
 cout << z << endl; // we can print address of pointer like this
 
-func1(&y);
+func1(*z);
 cout << y << endl;
 
-/*When function parameter is int& only references are accepted (reference variable without &) and no pointers
-Wheb function parameter is int* it can accept both reference(with &) and pointers without dereferencing them
+/*When function parameter is int& only references (reference variable without &) and dereferenced pointers are accepted.
+Wheb function parameter is int* it can accept both reference(with &) and pointers without dereferencing them.
 */
 
     return 0;
